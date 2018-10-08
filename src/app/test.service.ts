@@ -6,25 +6,27 @@ import {HttpClient} from '@angular/common/http';
 })
 export class TestService {
 
+   myurl:any = 'https://hidden-falls-24762.herokuapp.com/';
+
   constructor(private http: HttpClient) { }
 
 
   addMovieToWatchLater(movie)
   {
-    this.http.post("http://localhost:3000/watchLater", movie).subscribe();
+    this.http.post(this.myurl+'watchLater', movie).subscribe();
 
   }
 
 
   addMovieToFavourites(movie){
-    this.http.post("http://localhost:3000/favourite", movie).subscribe();
+    this.http.post(this.myurl+'favourite', movie).subscribe();
     
   }
 
 
   addMovieToBadMovies(movie)
   {
-    this.http.post("http://localhost:3000/badMovies", movie).subscribe();
+    this.http.post(this.myurl+'badMovies', movie).subscribe();
 
   }
 
@@ -52,31 +54,31 @@ export class TestService {
 
   getWatchLaterMovies()
   {
-    return this.http.get("http://localhost:3000/watchLater");
+    return this.http.get(this.myurl+'watchLater');
   }
   
 
   getFavouriteMovies()
   {
-    return this.http.get("http://localhost:3000/favourite");
+    return this.http.get(this.myurl+'favourite');
   }
 
   getBadMovies()
   {
-    return this.http.get("http://localhost:3000/badMovies");
+    return this.http.get(this.myurl+'badMovies');
   }
 
 
   deleteWatchLater(id)
   {
-    const url = `http://localhost:3000/watchLater/${id}`;
+    const url = `https://hidden-falls-24762.herokuapp.com/watchLater/${id}`;
     return this.http.delete(url);
     
   }
 
   deleteFavouriteMovies(id)
   {
-    const url = `http://localhost:3000/favourite/${id}`;
+    const url = `https://hidden-falls-24762.herokuapp.com/favourite/${id}`;
     
    return this.http.delete(url);
 
@@ -84,7 +86,7 @@ export class TestService {
 
   deleteBadMovies(id)
   {
-    const url = `http://localhost:3000/BadMovies/${id}`;
+    const url = `https://hidden-falls-24762.herokuapp.com/BadMovies/${id}`;
 
     return this.http.delete(url);
 
