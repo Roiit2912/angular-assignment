@@ -43,3 +43,27 @@ border-spacing: 1px;
     text-align: center;
     color: aqua;
 }
+
+@media (max-width: 700px)
+{
+    .card
+    {
+        width: 100vw;
+    }
+}
+
+@media (min-width: 1300px)
+{
+    .card
+    {
+        width: 33.3vw;
+    }
+}
+
+@media (min-width: 2000px)
+{
+    .card
+    {
+        width: 25vw;
+    }
+}
