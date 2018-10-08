@@ -1,0 +1,45 @@
+.btn{
+    padding: 15px;
+    border-block-end: gray;
+    border-color: rgb(17, 2, 2);
+    }
+    
+    /* .upcoming-movies{
+    height: auto;
+    width: 50vw;
+    
+    } */
+    
+    .top-rated-movies{
+        overflow: hidden;
+    }
+    
+    
+     .movieList
+    {
+       
+        width: 100vw;
+        display: flex;
+        overflow-x: hidden;
+        flex-wrap: wrap;
+    } 
+    
+    .card{
+    width: 50vw;
+    height: auto;
+    padding: 4px;
+    /* padding-block-start: 4px; */
+    border: 5px;
+    border-color:black;
+    border-spacing: 1px;
+    
+    }
+    
+    .card-img-top{
+        width: auto;
+        height: auto;
+    }
+    
+    .heading{
+        text-align: center;
+    }

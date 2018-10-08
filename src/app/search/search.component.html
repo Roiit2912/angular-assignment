@@ -1,0 +1,51 @@
+<div style="text-align:center">
+    
+    <h1>
+      Welcome to Movie World
+    </h1>
+  </div>
+
+
+
+  <input type="search" class="form-control mr-sm-2" style="width:40vw" placeholder="Search Movies" [(ngModel)]="searchText">
+
+  <button class="btn btn-primary" type="submit" (click)="searchMe(searchText)">Search</button>
+
+
+
+<div class="search" *ngIf="searchMovie">
+
+<div class="searchList">
+
+<div class="loop" *ngFor="let res of searchMovie.results">
+
+
+<div class="card" >
+<!-- <div class="layout"> -->
+
+  <img class="card-img-top" src="http://image.tmdb.org/t/p/w500{{res.poster_path}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{res.original_title}}</h5>
+    <!-- <p class="card-text">{{res.overview}}</p> -->
+    <button class="btn btn-primary" (click)="postWatchLaterMovies(res)">Watch later</button>
+            <button class="btn btn-primary" (click)="postFavouriteMovies(res)">Add To Favorite</button>
+            <button class="btn btn-primary" (click)="postBadMovies(res)">Bad movie</button>
+    <button class="btn btn-primary" (click)="routeToMoreInfo(res.id)" > More Info. </button>
+
+
+    
+
+  </div>
+
+<!-- </div> -->
+
+</div>
+
+
+</div> 
+
+
+</div>
+
+</div>
+

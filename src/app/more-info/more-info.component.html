@@ -1,0 +1,26 @@
+<div class="more-info" *ngIf="myMovie">
+  <img src="http://image.tmdb.org/t/p/w500{{myMovie.poster_path}}" alt="Card image cap" style="width: auto; height: 50vh;">
+  <h3>Movie Title : </h3> {{myMovie.title}}<br>
+  <h4>Movie Overview:</h4> {{myMovie.overview}}<br>
+  <h4>Popularity:</h4> {{myMovie.popularity}}<br>
+  <h4>Adult:</h4> {{myMovie.adult}}
+  <h4>Release Date:</h4> {{myMovie.release_date}}<br>
+  <h4>Original Language</h4> {{myMovie.original_language}}
+  <h4>Original Title</h4> {{myMovie.original_title}}
+
+
+
+
+
+  <!-- <div class="card" >  
+    <img class="card-img-top" src="http://image.tmdb.org/t/p/w4h400{{myMovie.poster_path}}" alt="Card image cap">
+      <div class="card-body">
+        <h4 class="card-title">{{myMovie.original_title}}</h4>
+        <p class="card-text">{{myMovie.overview}}</p>
+      </div>
+  </div> -->
+
+
+
+
+</div>

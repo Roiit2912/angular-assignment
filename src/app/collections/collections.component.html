@@ -1,0 +1,106 @@
+<div class="cover">
+
+    <h2 class="heading">YOUR MOVIE COLLECTION!!!!</h2>
+
+
+<div class="watchLater" *ngIf="watchLater">
+
+    <br>
+
+  <h3 class="heading1">WATCH LATER</h3>
+
+  <div class="movieList">
+
+    <div class="loop" *ngFor="let res of watchLater">
+     
+      <div class="card" >
+        
+          <img class="card-img-top" src="http://image.tmdb.org/t/p/w500{{res.poster_path}}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{res.original_title}}</h5>
+            
+            <button class="btn btn-primary" (click)="routeToMoreInfo(res.id)" > More Info. </button>
+            <button class="btn btn-primary" (click)="deleteWatchLater(res.id)" > Delete </button>
+            
+
+          </div>
+
+        </div>
+
+    </div>
+
+
+  </div>
+  
+
+</div>
+
+
+
+<div class="favouriteMovie" *ngIf="favouriteMovie">
+    <br><br>
+
+    <h3 class="heading1">FAVOURITE MOVIES</h3>
+
+    <div class="movieList">
+
+        <div class="loop" *ngFor="let res of favouriteMovie">
+
+            <div class="card" >
+        
+                <img class="card-img-top" src="http://image.tmdb.org/t/p/w500{{res.poster_path}}" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">{{res.original_title}}</h5>
+                  
+                  <button class="btn btn-primary" (click)="routeToMoreInfo(res.id)" > More Info. </button>
+                  <button class="btn btn-primary" (click)="deleteFavouriteMovies(res.id)" > Delete </button>
+      
+                </div>
+      
+              </div>
+      
+          </div>
+
+    
+      </div>
+
+</div>
+
+
+
+<div class="badMovie" *ngIf="badMovie">
+    <br><br>
+
+    <h3 class="heading1">BAD MOVIES</h3>
+
+    <div class="movieList">
+
+        <div class="loop" *ngFor="let res of badMovie">
+
+            <div class="card" >
+        
+                <img class="card-img-top" src="http://image.tmdb.org/t/p/w500{{res.poster_path}}" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">{{res.original_title}}</h5>
+                  
+                  <button class="btn btn-primary" (click)="routeToMoreInfo(res.id)" > More Info. </button>
+                  <button class="btn btn-primary" (click)="deleteBadMovies(res.id)" > Delete </button>
+      
+                </div>
+      
+              </div>
+      
+          </div>
+
+    
+      </div>
+
+</div>
+
+
+
+
+
+
+
+</div>

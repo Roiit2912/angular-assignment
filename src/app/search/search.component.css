@@ -1,0 +1,35 @@
+.btn{
+    padding: 15px;
+    border-block-end: gray;
+    border-color: rgb(17, 2, 2);
+    }
+    
+   .search {
+       overflow: hidden;
+   }
+
+
+   
+    /* .form-control{display: inline}
+    
+    .btn{display: inline} */
+    
+    
+     .searchList
+    {
+       
+        width: 100vw;
+        display: flex;
+        overflow-x: hidden; 
+        flex-wrap: wrap;
+        /* overflow: hidden; */
+    } 
+    
+    .card{
+    width: 50vw;
+    padding: 4px;
+    border: 5px;
+    border-color:black;
+    border-spacing: 1px;
+    
+    }

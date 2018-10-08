@@ -1,0 +1,43 @@
+<h2 class="heading">WATCH THE UPCOMING MOVIES!!!!</h2>
+
+
+
+<div class="upcoming-movies" *ngIf="up_obj">
+    
+    <div class="movieList">
+    
+    <div class="loop" *ngFor="let res of up_obj.results">
+       
+        
+
+        <div class="card" >
+        <!-- <div class="layout"> -->
+
+          <img class="card-img-top" src="http://image.tmdb.org/t/p/w500{{res.poster_path}}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{res.original_title}}</h5>
+            <!-- <p class="card-text">{{res.overview}}</p> -->
+
+            <!-- <div class="card-footer"> -->
+
+            <button class="btn btn-primary" (click)="postWatchLaterMovies(res)">Watch later</button>
+            <button class="btn btn-primary" (click)="postFavouriteMovies(res)">Add To Favorite</button>
+            <button class="btn btn-primary" (click)="postBadMovies(res)">Bad movie</button>
+            <button class="btn btn-primary" (click)="routeToMoreInfo(res.id)" > More Info. </button>
+
+            <!-- </div> -->
+
+          </div>
+
+        <!-- </div> -->
+
+        </div>
+
+        </div>        
+
+        </div>
+
+    
+
+</div>
+
