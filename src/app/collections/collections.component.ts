@@ -45,17 +45,27 @@ export class CollectionsComponent implements OnInit {
 
   deleteWatchLater(id)
   {
-    this.test.deleteWatchLater(id);
+    this.test.deleteWatchLater(id).subscribe(()=>this.callOnceMore());
+      
+    
   }
 
   deleteFavouriteMovies(id)
   {
-    this.test.deleteFavouriteMovies(id);
+    this.test.deleteFavouriteMovies(id).subscribe(()=>this.callOnceMore());
   }
 
   deleteBadMovies(id)
   {
-    this.test.deleteBadMovies(id);
+    this.test.deleteBadMovies(id).subscribe(()=>this.callOnceMore());
+  }
+
+  callOnceMore()
+  {
+    this.getWatchLaterMovies();
+    this.getFavouriteMovies();
+    this.getBadMovies();
+
   }
 
 

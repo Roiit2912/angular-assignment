@@ -17,7 +17,7 @@ export class TestService {
 
 
   addMovieToFavourites(movie){
-    this.http.post("http://localhost:3000/favourite", movie).subscribe(result => console.log("result", result));
+    this.http.post("http://localhost:3000/favourite", movie).subscribe();
     
   }
 
@@ -70,8 +70,7 @@ export class TestService {
   deleteWatchLater(id)
   {
     const url = `http://localhost:3000/watchLater/${id}`;
-    //console.log('url', url);
-    this.http.delete(url).subscribe();
+    return this.http.delete(url);
     
   }
 
@@ -79,7 +78,7 @@ export class TestService {
   {
     const url = `http://localhost:3000/favourite/${id}`;
     
-    this.http.delete(url).subscribe();
+   return this.http.delete(url);
 
   }
 
@@ -87,7 +86,7 @@ export class TestService {
   {
     const url = `http://localhost:3000/BadMovies/${id}`;
 
-    this.http.delete(url).subscribe();
+    return this.http.delete(url);
 
 
   }
